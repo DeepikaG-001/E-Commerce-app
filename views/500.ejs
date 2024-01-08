@@ -1,0 +1,32 @@
+<!-- <%- include('includes/head.ejs') %>
+</head>
+
+<body>
+    <%- include('includes/navigation.ejs') %>
+    <h1>Some error occurred!</h1>
+    <p>We're working on this. Sorry for the incovinence</p>
+
+<%- include('includes/end.ejs') %> -->
+
+
+<%- include('includes/head.ejs') %>
+</head>
+
+<body>
+    <%- include('includes/navigation.ejs') %>
+    <h1>Some error occurred!</h1>
+    <p>We're working on this. Sorry for the inconvenience</p>
+
+    <!-- Check if isAuthenticated is defined before using it -->
+    <% if (typeof isAuthenticated !== 'undefined') { %>
+        <!-- Render content based on isAuthenticated -->
+        <% if (isAuthenticated) { %>
+            <!-- Content for authenticated users -->
+        <% } else { %>
+            <!-- Content for non-authenticated users -->
+        <% } %>
+    <% } %>
+
+    <%- include('includes/end.ejs') %>
+</body>
+</html>
